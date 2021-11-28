@@ -31,6 +31,10 @@ def Back_Propagation():
     lol = 0
 
 
+def UpdateWeightsAndBias():
+    return 0;
+
+
 def main():
     input_xor = np.array([[0, 0, 1, 1], [0, 1, 0, 1]])  # input
     output_xor = np.array([[0, 1, 1, 0]])  # output
@@ -41,8 +45,14 @@ def main():
     output_f = output_xor.shape[0]
     w1, w2, b1, b2 = Initialize_Parameters(input_f, num_of_neurons, output_f)
     epoch = 5000
-    lr = 0.01
+    lr = 0.25
     total_loss = np.zeros((epoch, 1))
+    epochs = 5000  # num of steps
+    #for i in range(epochs):
+     #   Forward_Propagation(input_xor, output_f, w1, w2, b1, b2)
+      #  Back_Propagation()  # Compute gradients /derivatives
+       # UpdateWeightsAndBias()  # Update weights & bias
+
     mse, z1, z1_hat, z2, z2_hat = Forward_Propagation(input_xor, output_f, w1, w2, b1, b2)
     print("z1 : ", z1)
     print("z1 hat : ", z1_hat)
