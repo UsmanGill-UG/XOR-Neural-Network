@@ -11,8 +11,8 @@ def sigmoid(x):
 
 # init function
 def Initialize_Parameters(input_f, num_of_neurons, output_f):
-    w1 = np.random.randn(num_of_neurons, input_f)  # 2 x2 # hidden layers weights
-    w2 = np.random.randn(output_f, num_of_neurons)  # 2 x 1 # weight going to final neutron
+    w1 = np.random.rand(num_of_neurons, input_f)  # 2 x2 # hidden layers weights
+    w2 = np.random.rand(output_f, num_of_neurons)  # 2 x 1 # weight going to final neutron
     b1 = np.zeros((num_of_neurons, 1))  # 2 x 1  # hidden layer bias
     b2 = np.zeros((output_f, 1))  # 1 x 1  # bias at last neutron
     return w1, w2, b1, b2
